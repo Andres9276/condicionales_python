@@ -33,3 +33,57 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+palabra_1 = str(input('Escribir una palbra: '))
+palabra_2 = str(input('Escribir una palbra: '))
+palabra_3 = str(input('Escribir una palbra: '))
+
+print('Como lo queres ordenar')
+print('Ordenar por alfabetico, ingresar: 1')
+print('Ordenar por cantidad de letras, ingresar: 2')
+
+respuesta = int(input('Ingrese su opcion: '))
+
+if respuesta <= 0 or respuesta >2:
+    print('Numero incorrecto')
+
+if respuesta == 1:
+    if palabra_1 > palabra_2 and palabra_1 > palabra_3 and palabra_2 < palabra_1 and palabra_2 > palabra_3:
+       print('El Orden es:',palabra_1,palabra_2,palabra_3)
+
+    elif palabra_1 > palabra_2 and palabra_1 > palabra_3 and palabra_3 < palabra_1 and palabra_3 > palabra_2:
+       print('El Orden es:',palabra_1,palabra_3,palabra_2)
+
+    elif palabra_2 > palabra_1 and palabra_2 > palabra_3 and palabra_1 < palabra_2 and palabra_1 > palabra_3:
+       print('El Orden es:',palabra_2,palabra_1,palabra_3)
+
+    elif palabra_2 > palabra_1 and palabra_2 > palabra_3 and palabra_3 < palabra_2 and palabra_3 > palabra_1:
+       print('El Orden es:',palabra_2,palabra_3,palabra_1)
+
+    elif palabra_3 > palabra_2 and palabra_3 > palabra_1 and palabra_2 < palabra_3 and palabra_2 > palabra_1:
+       print('El Orden es:',palabra_3,palabra_2,palabra_1)
+
+    elif palabra_3 > palabra_2 and palabra_3 > palabra_1 and palabra_1 < palabra_3 and palabra_1 > palabra_2:
+       print('El Orden es:',palabra_3,palabra_1,palabra_2)
+
+    else:
+        print('Son igiales:',palabra_1,palabra_2,palabra_3)
+
+
+if respuesta == 2:
+    if len(palabra_1) >= len(palabra_2) and len(palabra_1) >= len(palabra_3) and len(palabra_2) <= len(palabra_1) and len(palabra_2) >= len(palabra_3):
+       print('El Orden es:',palabra_1,palabra_2,palabra_3)
+
+    elif len(palabra_1) >= len(palabra_2) and len(palabra_1) >= len(palabra_3) and len(palabra_3) <= len(palabra_1) and len(palabra_3) >= len(palabra_2):
+       print('El Orden es:',palabra_1,palabra_3,palabra_2)
+
+    elif len(palabra_2) >= len(palabra_1) and len(palabra_2) >= len(palabra_3) and len(palabra_1) <= len(palabra_2) and len(palabra_1) >= len(palabra_3):
+       print('El Orden es:',palabra_2,palabra_1,palabra_3)
+
+    elif len(palabra_2) >= len(palabra_1) and len(palabra_2) >= len(palabra_3) and len(palabra_3) <= len(palabra_2) and len(palabra_3) >= len(palabra_1):
+       print('El Orden es:',palabra_2,palabra_3,palabra_1)
+
+    elif len(palabra_3) >= len(palabra_2) and len(palabra_3) >= len(palabra_1) and len(palabra_2) <= len(palabra_3) and len(palabra_2) >= len(palabra_1):
+       print('El Orden es:',palabra_3,palabra_2,palabra_1)
+
+    elif len(palabra_3) >= len(palabra_2) and len(palabra_3) >= len(palabra_1) and len(palabra_1) <= len(palabra_3) and len(palabra_1) >= len(palabra_2):
+       print('El Orden es:',palabra_3,palabra_1,palabra_2)

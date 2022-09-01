@@ -30,3 +30,28 @@ contenido. Recomendamos pensar bien este problema de lógica con un lápiz y pap
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+
+tem_1 = int(input('Ingresar la temperatura dia 1: '))
+tem_2 = int(input('Ingresar la temperatura dia 2: '))
+tem_3 = int(input('Ingresar la temperatura dia 3: '))
+
+if tem_1 > tem_2 and tem_1 > tem_3:
+    print('La temperatura mayor es:',tem_1)
+elif tem_2 > tem_1 and tem_2 > tem_3:
+    print('La temperatura mayor es:',tem_2)
+elif tem_3 > tem_1 and tem_3 > tem_2:
+    print('La temperatura mayor es:',tem_3)
+else:
+    print('La temperatura mayor es:',tem_1)
+
+if tem_1 < tem_2 and tem_1 < tem_3:
+    print('La temperatura menor es:',tem_1)
+elif tem_2 < tem_1 and tem_2 < tem_3:
+    print('La temperatura menor es:',tem_2)
+elif tem_3 < tem_1 and tem_3 < tem_2:
+    print('La temperatura menor es:',tem_3)
+else:
+    print('La temperatura menor es:',tem_1)
+
+promedio = (tem_1 + tem_2 + tem_3) // (3)
+print('Promedio de temperatura:',promedio)
